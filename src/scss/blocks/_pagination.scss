@@ -1,0 +1,41 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding: 43px 0;
+  
+
+}
+
+
+.pagination__text-link, a.pagination__text-link{
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+    &:hover {
+        color: #E84C50 ;
+    }
+}
+.pagination__current{
+    display: flex;
+    
+    font-weight: 700;
+    font-size: 18px;
+    & > *:not(:last-child){
+        margin-right: 17px;
+    }
+    
+}
+.pagination__current-active{
+    color: #E84C50;
+}
+a.pagination__current-link {
+    
+    color: #000000;
+    text-decoration: none;
+    &:hover {
+        color: #E84C50 ;
+        text-decoration: none;
+    }
+}

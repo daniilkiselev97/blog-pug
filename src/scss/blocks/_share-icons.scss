@@ -1,0 +1,9 @@
+.share-icons {
+    margin-right: 30px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.post__share-icons{
+    display: flex;
+}

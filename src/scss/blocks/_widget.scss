@@ -1,0 +1,21 @@
+.widget{
+    width: 270px;
+    &:first-child{
+        margin-top: 60px;
+    }
+    &:not(:last-child){
+        margin-bottom: 30px;
+    }
+}
+.widget__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 70px;
+    text-align: center;
+    color: #000000;
+
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    height: 70px;
+    padding: 0 20px;
+}
