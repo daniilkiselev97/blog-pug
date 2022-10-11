@@ -1,0 +1,18 @@
+{
+    "footerNavFirst" : [
+        {"title": "Latest Posts", "link": "#"}, 
+        {"title": "Popular Posts", "link": "#"}
+    ],
+    "footerNavSecond" : [
+        {"title": "Store", "link": "#"}, 
+        {"title": "Contact Information", "link": "#"}
+    ],
+    "footerNavThird" : [
+        {"title": "Privacy Policy", "link": "#"}, 
+        {"title": "Terms of Use", "link": "#"}
+    ]
+
+}
+
+
+

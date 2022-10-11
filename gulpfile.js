@@ -10,7 +10,9 @@ const notify = require('gulp-notify');
 const gcmq = require('gulp-group-css-media-queries');
 const sassGlob = require('gulp-sass-glob');
 const pug = require('gulp-pug')
-const del = require('del')
+const del = require('del');
+const fs = require('fs')
+
 
 
 
@@ -30,7 +32,11 @@ gulp.task('pug', function(callback){
         })
     }))
     .pipe(pug({
-        pretty:true
+        pretty:true,
+        locals: {
+            jsonData : JSON.parse(fs.readFileSync('./src/data/html-data.json', 'utf8')),
+            footerNav : JSON.parse(fs.readFileSync('./src/data/footer-nav.json', 'utf8'))
+        }
     }))
     .pipe(gulp.dest('./build/'))
     .pipe(browserSync.stream())
@@ -83,7 +89,7 @@ gulp.task('watch', function(){
     watch('./src/scss/**/*.scss', function() {
         setTimeout (gulp.parallel('scss'), 1000 )
     })
-    watch('./src/pug/**/*.pug',gulp.parallel('pug'))
+    watch(['./src/pug/**/*.pug', '.src/data/**/*.json'], gulp.parallel('pug'))
     watch('./src/img/**/*.*',gulp.parallel('copy:img'))
     watch('./src/js/**/*.js',gulp.parallel('copy:js'))
 })
